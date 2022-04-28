@@ -33,6 +33,7 @@ function registrar() {
     if (newName.length == 0 || newLastname.length == 0 || newCareer.length == 0
         || newAge == 0 || newMail.length == 0 || newCell == 0) {
         alert("Diligencia todos los campos.")
+        return
     } else {
         for (let index = 0; index < tablaRegistro.length; index++) {
             if (newMail == tablaRegistro[index].correo) {
@@ -42,6 +43,7 @@ function registrar() {
     }
     if (confirmar == true) {
         alert("Correo ya registrado.")
+        return
     } else {
         elemento.innerHTML += `<tr><td>${newName}</td><td>${newLastname}</td><td>${newCareer}</td><td>${newAge}</td><td>${newMail}</td><td>${newCell}</td></tr>`
         let nuevo = {
